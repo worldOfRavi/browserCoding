@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { accordian } from "../config";
+import { accordian } from "../../config";
 
 const Accordian = () => {
   const [answerId, setAnswerId] = useState(null);
