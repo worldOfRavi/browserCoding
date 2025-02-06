@@ -6,6 +6,9 @@ import Counter from "./component/hooksUsages/Counter"
 import RandomColorGenerator from "./component/random-color"
 import StarRating from "./component/star-rating"
 import ImageSliderSecond from "./component/image-slider/ImageSlider"
+import DragableTodo from "./component/DragableTodo"
+import { initialData } from "./component/DragableTodo/config"
+import DragableTodoReloaded from "./component/DragableTodo/DragableTodo"
 
 
 const App = () => {
@@ -27,7 +30,11 @@ const App = () => {
       {/* <StarRating /> */}
 
       {/* image slider second one */}
-      <ImageSliderSecond />
+      {/* <ImageSliderSecond url = {"https://picsum.photos/v2/list"} limit={10} /> */}
+
+      {/* dragable todo */}
+      {/* <DragableTodo initialState={initialData} /> */}
+      <DragableTodoReloaded initialState={initialData} />
     </React.Fragment>
   )
 }
