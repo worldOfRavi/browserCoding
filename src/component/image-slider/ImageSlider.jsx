@@ -85,7 +85,11 @@ function ImageSliderSecond({ url, limit = 10 }) {
 
 //   function to handle left slide
 function handleLeftSlide(getCurrentSlide){
+  // You can do it two ways as shown below
+  // 1. using the prev 
     setCurrentSlide((prev)=>((prev -1 + images.length))%images.length)
+    // 2. using the passed index 
+    // setCurrentSlide(getCurrentSlide === 0 ? images.length - 1 : getCurrentSlide - 1)
 }
 
 // function to handle right slide
@@ -97,7 +101,6 @@ function handleRighttSlide(getCurrentSlide){
     if (url != null) fetchImages(url);
   }, [url, limit]);
 
-  console.log(images);
 
   if (isLoading) {
     return <p>Images are loading please wait...</p>;
@@ -125,7 +128,7 @@ function handleRighttSlide(getCurrentSlide){
           <div className="absolute bottom-5 transform left-1/2 -translate-x-1/2 flex gap-2">
           {
             images && images.length > 0  && images.map((_, index)=>{
-                return <span  className={`w-4 h-4 bg-white rounded-full ${index === currentSlide ? "opacity-100 scale-110" : "opacity-50"}`}></span>
+                return <span key={index} onClick={()=>setCurrentSlide(index)}  className={`w-4 h-4 bg-white rounded-full cursor-pointer ${index === currentSlide ? "opacity-100 scale-110" : "opacity-50"}`}></span>
             })  
           }
           </div> 

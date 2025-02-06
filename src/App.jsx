@@ -30,11 +30,11 @@ const App = () => {
       {/* <StarRating /> */}
 
       {/* image slider second one */}
-      {/* <ImageSliderSecond url = {"https://picsum.photos/v2/list"} limit={10} /> */}
+      <ImageSliderSecond url = {"https://picsum.photos/v2/list"} limit={10} />
 
       {/* dragable todo */}
       {/* <DragableTodo initialState={initialData} /> */}
-      <DragableTodoReloaded initialState={initialData} />
+      {/* <DragableTodoReloaded initialState={initialData} /> */}
     </React.Fragment>
   )
 }
