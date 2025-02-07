@@ -9,6 +9,7 @@ import ImageSliderSecond from "./component/image-slider/ImageSlider"
 import DragableTodo from "./component/DragableTodo"
 import { initialData } from "./component/DragableTodo/config"
 import DragableTodoReloaded from "./component/DragableTodo/DragableTodo"
+import LoadMore from "./component/Load-more"
 
 
 const App = () => {
@@ -30,11 +31,14 @@ const App = () => {
       {/* <StarRating /> */}
 
       {/* image slider second one */}
-      <ImageSliderSecond url = {"https://picsum.photos/v2/list"} limit={10} />
+      {/* <ImageSliderSecond url = {"https://picsum.photos/v2/list"} limit={10} /> */}
 
       {/* dragable todo */}
       {/* <DragableTodo initialState={initialData} /> */}
       {/* <DragableTodoReloaded initialState={initialData} /> */}
+
+      {/* load more project */}
+      <LoadMore />
     </React.Fragment>
   )
 }
